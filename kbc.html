@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Welcome to KBC</h2>
+    <script>
+      alert("Welcome to KBC");
+      var prizeMoney = 0,
+        score = 0;
+
+      var kbc = [
+        {
+          question:
+            "Who is the invented of javascript ? \n (a)Douglas Crockford \n (b)Sheryl Sandberg \n(c)Brendan Eich",
+          answer: "c",
+        },
+        {
+          question:
+            "Which tool can you use to ensure code quality ? \n(a)ANGULAR\n(b)jQuery\n (c) ESLint",
+          answer: "c",
+        },
+        {
+          question:
+            " Which one of these is a JavaScript package manager ? \n(a)NODE js  \n (b) NPN \n (c) Typescript ",
+          answer: "c",
+        },
+      ];
+      for (var i = 0; i < kbc.length; i++) {
+        var output = prompt(kbc[i].question);
+
+        if (output == kbc[i].answer) {
+          alert("Correct answer!");
+
+          prizeMoney = prizeMoney + 5000;
+          score++;
+        } else {
+          alert("Wrong answer and Game is over");
+          break;
+        }
+      }
+      alert(
+        "Out of " +
+          kbc.length +
+          " questions " +
+          score +
+          " were correct and you've won Rs." +
+          prizeMoney
+      );
+    </script>
+  </body>
+</html>
